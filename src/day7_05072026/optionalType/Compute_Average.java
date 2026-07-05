@@ -13,7 +13,14 @@ public class Compute_Average {
 		return Optional.of((double) sum / scores.length);
 	}
 	public static void main(String[] args) {
+		//System.out.println(average().get()); //Exception in thread "main" java.util.NoSuchElementException: No value present
 		System.out.println(average());
 		System.out.println(average(10,20,30).get());
+		
+		Optional<Double> opt = average(90, 100);
+		opt.ifPresent(System.out::println);
+		
+		Optional<Double> opt2 = average();
+		opt2.ifPresent(System.out::println);
 	}
 }
