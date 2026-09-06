@@ -1,0 +1,17 @@
+package day13_06092026;
+
+public class App {
+	   public static void main(String[] args) {
+	       A bobj = new B();
+	       A cobj = new C();
+
+	       if (cobj instanceof B v) {
+	           v.mB();
+	           if (v instanceof C v1) {
+	               v1.mC();
+	           }
+	       } else {
+	           cobj.mA();
+	       }
+	   }
+	}
